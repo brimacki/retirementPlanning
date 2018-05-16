@@ -64,8 +64,9 @@ int main(){
 	cout << "This is your total retirement when you leave the employ of Colorado: $" << totalRetirement << endl;
 
 	//Determine defined benefit, option 2.
+	totalRetirement = years*.025*(salary.at(salary.size() -1) + salary.at(salary.size() - 2) + salary.at(salary.size() -3))/3.0;
 	cout << "Your three largest salaries are: $" << salary.at(salary.size() - 1) << ", $" << salary.at(salary.size() - 2) << ", $" << salary.at(salary.size() - 3) << endl;
-	cout << "Your defined benefit based on three highest years is: $" << years*.025*(salary.at(salary.size() - 1) + salary.at(salary.size() - 2) + salary.at(salary.size() - 3))/3.0 << endl;
+	cout << "Your defined benefit based on three highest years is: $" << totalRetirement << endl;
 
 	//Determine defined contribution.
 	employerContribution = 0.1015;
